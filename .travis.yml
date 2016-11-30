@@ -1,0 +1,24 @@
+language: java
+
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+notifications:
+  email: false
+
+install:
+  - cd $TRAVIS_BUILD_DIR/ && mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+addons:
+  sonarqube: true
+env:
+  global:
+    - secure: $SONAR_TOKEN
+script:
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=$SONAR_TOKEN
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_TOKEN
