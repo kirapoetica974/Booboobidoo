@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Commande.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Domain</a> &gt; <a href="index.source.html" class="el_package">entites</a> &gt; <span class="el_source">Commande.java</span></div><h1>Commande.java</h1><pre class="source lang-java linenums">package entites;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Commande implements ICommande {
+
+	private String identifiant;
+	
+<span class="nc" id="L11">	private List&lt;String&gt; listeIdVetement = new ArrayList&lt;String&gt;();</span>
+	
+	private int prix;
+	
+	private Date date;
+
+	public Commande(String identifiant, List&lt;String&gt; listeIdVetement, int prix, Date date) {
+<span class="nc" id="L18">		super();</span>
+<span class="nc" id="L19">		this.identifiant = identifiant;</span>
+<span class="nc" id="L20">		this.listeIdVetement = listeIdVetement;</span>
+<span class="nc" id="L21">		this.prix = prix;</span>
+<span class="nc" id="L22">		this.date = date;</span>
+<span class="nc" id="L23">	}</span>
+
+	@Override
+	public String getIdentifiant() {
+<span class="nc" id="L27">		return identifiant;</span>
+	}
+	
+	@Override
+	public void setIdentifiant(String identifiant) {
+<span class="nc" id="L32">		this.identifiant = identifiant;</span>
+<span class="nc" id="L33">	}</span>
+
+	@Override
+	public List&lt;String&gt; getListeIdVetement() {
+<span class="nc" id="L37">		return listeIdVetement;</span>
+	}
+
+	@Override
+	public void setListeIdVetement(List&lt;String&gt; listeIdVetement) {
+<span class="nc" id="L42">		this.listeIdVetement = listeIdVetement;</span>
+<span class="nc" id="L43">	}</span>
+
+	@Override
+	public int getPrix() {
+<span class="nc" id="L47">		return prix;</span>
+	}
+
+	@Override
+	public void setPrix(int prix) {
+<span class="nc" id="L52">		this.prix = prix;</span>
+<span class="nc" id="L53">	}</span>
+
+	@Override
+	public Date getDate() {
+<span class="nc" id="L57">		return date;</span>
+	}
+
+	@Override
+	public void setDate(Date date) {
+<span class="nc" id="L62">		this.date = date;</span>
+<span class="nc" id="L63">	}</span>
+	
+	@Override
+    public String toString() {
+<span class="nc" id="L67">        return &quot;Commande{&quot; +</span>
+<span class="nc" id="L68">                &quot;identifiant=&quot; + identifiant +</span>
+<span class="nc" id="L69">                &quot;, date=&quot; + date +</span>
+<span class="nc" id="L70">                &quot;, prix=&quot; + prix +</span>
+<span class="nc" id="L71">                '}';</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
