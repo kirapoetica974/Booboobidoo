@@ -19,6 +19,6 @@ env:
 
 deploy:
   provider: heroku
-  api_key: $HEROKU_TOKENA
+  --api_key: $HEROKU_TOKENA
   
   
