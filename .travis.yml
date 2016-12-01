@@ -12,7 +12,6 @@ addons:
 env:
   global:
   - secure: $SONAR_TOKEN
-  - secure: YoCfmXgIikJ6Yue7xYj/PSWW3IxBo7VauAyOI4+Zre1vsYuUByd6Q1bR+rBdA8n86ZHcFfwHgQ5trWON1z8sLzAAiNblferC5Z9ZtV00/ocQ3dCMqNLDG8ev/Zw6NbmKQXJrPh4nFg65Z4xlAtlHLPZE/UyTeVVyO4Vg2WEdVz83enC7EfY9soxSv1J1gEl8ALw4+K8gdzNuZiiT5yJ+A3xf+SEgzfXgrggA3l8vd+IjHIF4Z3hHwPXc60F5lRhoP2G4+K9Z20jcmzL8UBVSRwRgftj4DAtFXBEUJ24L5v3IlRt2ZMzkM0ch1AYhJdYKddjYO/A7xYN4+Irnw5/lGT+fpOuR2QUQLMJd+5J6koSLEnDkNDdJEPFsnahu+s8EGcFrLog3UhGvhhE/WSll2INBajmwuBQ6bTgvO7z/mEDmBCv3CSN2mQTCK9ply9Vsg6CZ4r+mB/iEwX6dVdaQ/FNWSln6gyBI8tW7je2Sn/t+CMDYvJtCQFUsKrK8RtXnmlcXaR/vJcmYTS7ZnApOrmzb96GkygZzUoXWpJAs3RHithlJjMD1i3rnR4nsyjWVAQcvzm2ixRiuEf9ggmfe7ngTZsGy6/nq6RJLA/7iIXpZxJcG2nots7L38JrfbHOtKsbIP7lzEVYg8skspIkRY0NTgKu7Ta4X6IJRquH22L8=
 deploy:
   provider: heroku
   api_key:
