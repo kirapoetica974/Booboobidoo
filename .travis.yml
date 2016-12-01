@@ -1,26 +1,19 @@
 language: java
 sudo: false
 jdk:
-  - oraclejdk8
+- oraclejdk8
 notifications:
   email: false
 install:
-  - >-
-    cd $TRAVIS_BUILD_DIR/ && mvn install -DskipTests=true
-    -Dmaven.javadoc.skip=true -B -V
+- cd $TRAVIS_BUILD_DIR/ && mvn install -DskipTests=true -Dmaven.javadoc.skip=true
+  -B -V
 addons:
   sonarqube: true
 env:
   global:
-    - secure: $SONAR_TOKEN
-    - secure: >-
-        YoCfmXgIikJ6Yue7xYj/PSWW3IxBo7VauAyOI4+Zre1vsYuUByd6Q1bR+rBdA8n86ZHcFfwHgQ5trWON1z8sLzAAiNblferC5Z9ZtV00/ocQ3dCMqNLDG8ev/Zw6NbmKQXJrPh4nFg65Z4xlAtlHLPZE/UyTeVVyO4Vg2WEdVz83enC7EfY9soxSv1J1gEl8ALw4+K8gdzNuZiiT5yJ+A3xf+SEgzfXgrggA3l8vd+IjHIF4Z3hHwPXc60F5lRhoP2G4+K9Z20jcmzL8UBVSRwRgftj4DAtFXBEUJ24L5v3IlRt2ZMzkM0ch1AYhJdYKddjYO/A7xYN4+Irnw5/lGT+fpOuR2QUQLMJd+5J6koSLEnDkNDdJEPFsnahu+s8EGcFrLog3UhGvhhE/WSll2INBajmwuBQ6bTgvO7z/mEDmBCv3CSN2mQTCK9ply9Vsg6CZ4r+mB/iEwX6dVdaQ/FNWSln6gyBI8tW7je2Sn/t+CMDYvJtCQFUsKrK8RtXnmlcXaR/vJcmYTS7ZnApOrmzb96GkygZzUoXWpJAs3RHithlJjMD1i3rnR4nsyjWVAQcvzm2ixRiuEf9ggmfe7ngTZsGy6/nq6RJLA/7iIXpZxJcG2nots7L38JrfbHOtKsbIP7lzEVYg8skspIkRY0NTgKu7Ta4X6IJRquH22L8=
-
+  - secure: $SONAR_TOKEN
+  - secure: YoCfmXgIikJ6Yue7xYj/PSWW3IxBo7VauAyOI4+Zre1vsYuUByd6Q1bR+rBdA8n86ZHcFfwHgQ5trWON1z8sLzAAiNblferC5Z9ZtV00/ocQ3dCMqNLDG8ev/Zw6NbmKQXJrPh4nFg65Z4xlAtlHLPZE/UyTeVVyO4Vg2WEdVz83enC7EfY9soxSv1J1gEl8ALw4+K8gdzNuZiiT5yJ+A3xf+SEgzfXgrggA3l8vd+IjHIF4Z3hHwPXc60F5lRhoP2G4+K9Z20jcmzL8UBVSRwRgftj4DAtFXBEUJ24L5v3IlRt2ZMzkM0ch1AYhJdYKddjYO/A7xYN4+Irnw5/lGT+fpOuR2QUQLMJd+5J6koSLEnDkNDdJEPFsnahu+s8EGcFrLog3UhGvhhE/WSll2INBajmwuBQ6bTgvO7z/mEDmBCv3CSN2mQTCK9ply9Vsg6CZ4r+mB/iEwX6dVdaQ/FNWSln6gyBI8tW7je2Sn/t+CMDYvJtCQFUsKrK8RtXnmlcXaR/vJcmYTS7ZnApOrmzb96GkygZzUoXWpJAs3RHithlJjMD1i3rnR4nsyjWVAQcvzm2ixRiuEf9ggmfe7ngTZsGy6/nq6RJLA/7iIXpZxJcG2nots7L38JrfbHOtKsbIP7lzEVYg8skspIkRY0NTgKu7Ta4X6IJRquH22L8=
 deploy:
   provider: heroku
-  api_key: 
-        - secure: >-
-        reKf1oOfsWrk+iECLjFkNGeTDPUWKMY9dfcQ3pwKxLq3P31ahBohn+i71Fh94gDXvU5r9wqoU+vT0idFfK+OxEqgGZtLUxyNUXlUjKrDUeZMgPiWxwWcmaPvqswHbhRIWqeBrPGnf7B6aZ/mxVQVSq6nBSj3hFcaqBWxNSrm/s96WL4kfyIpAKuoOTthFpkMQXL4XZXvi7xhHcVmWIHg+2e1SoTDXb2UoIQGcwcjJu29ShWN44yyyfz/2FP6ybVLP2jaLyyyDekPEPRZ2WUfQ2sQXQNWWy410X5VSwzyz8CYlWAH9eLTz9sWkBUcsN84Vdu9xEA1Mh/hNP2A119DWGZQAhyUcloo2R6m2OGxNxgmZFU+VpUb9A7nM5Nlm+Ob34tpgxmW5hztUt2B+4yrvh0dy+/NYXFzZq4hnv29PhNZlCKkftT3eo4iX8c/oqDRJTKYoKlgZHV6/jcfUMaRSbbOl9q0dHjTmuktyCYQuhLhpMKXcSVTdbDxr9/YYAM87OcL4bsemCuokHO9PBRyP7OlojH0TBroz2gr0wgNKcxhEDWtOpeS1hUJrNCtllX1JTyWQHBfZUmnjcR2DpmNGp4Ve9VRiaVurOdGEkwNXLfP+dLB5NBtkfHKxaV2yKLdueeibgS70IWkmBHLpue4CsT4higgDaIyl5i+rS/hWOE=
-
-
-
+  api_key:
+    secure: NQVflHSKMLM7N53xnF7yIVA3pkI6r2kqmInF2iHBroIcpx1VksmccTsuAgbSiKtcgU+DY6mvSz8WMQIfweq+/hRYxv0qwN7jtUNx0rbMYIeEOi1Rxo0WgpTUO4MvRQQvpMutcICYJwiWMvvOKd8ciudbQKuMj8Ikqeeqh+ZASkeg1IKt2LHPQFgJWQc5xDVKsGE0GsfLzg6IbJTruVkVxJXS/foDUzEivHO57mgaaxZbg4INBTqdW/gq4pk2G0rb7d/jA06Zwwrh6WNEhWckW+Qgzgt/5DXlhMpleH9KlRxddBHs8HGTYJIsxSIaTjRUs4boYLbx02GxQZnXmvquYSNstNVwrpsuNYd/ULLxE3OKtxmOh2bbXD5oslOpqboXJAQT10ufH0CL30RUUDTlIpWNNPWoOGE0uyaQkAobjCulfx9S1jJq4zd1U6HLD3+/I7cJjxQmzXcbGaGiDCUREmgcvW7y2ZhM9z32Y+DMyCc+8yCgUR7cHm9gRulNBJOG0YbV65KqXtPE42DAT5nWGIH+8kiJfWoTZHmBm9EmpH3etwMUXcUC0u0QX9PKaiH21oqAavG2hVNnvfuKWczX5Z6Oev1EByiLf8CKGxKyATj5NvLKIGgbiRDN/FE0QRucPUXssFaylJGNs6leG089Z2CphezT9bdRBFdlQ4+TDwk=
