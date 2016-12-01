@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.Infrastructure.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec - in org.Infrastructure.AppTest
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in org.Infrastructure.AppTest
+>>>>>>> 9cdb6201571f07b5684c7e654f320bde9262811c

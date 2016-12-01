@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Infrastructure/src/main/java/fabrique/Fabrique.java
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Infrastructure/src/main/java/entrepot/Entrepot.java
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Infrastructure/src/main/java/configurations/ConfigurationEntrepot.java
+=======
+/Users/Rachelle/Documents/M2 ALMA/Boobidoo/Fournisseur/Infrastructure/src/main/java/fabrique/Fabrique.java
+/Users/Rachelle/Documents/M2 ALMA/Boobidoo/Fournisseur/Infrastructure/src/main/java/entrepot/Entrepot.java
+>>>>>>> 9cdb6201571f07b5684c7e654f320bde9262811c

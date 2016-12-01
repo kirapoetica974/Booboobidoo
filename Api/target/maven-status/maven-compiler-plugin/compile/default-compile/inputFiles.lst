@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/services/ICommandeServices.java
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/exceptions/ExceptionPasEnStock.java
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/entites/IVetement.java
 /home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/entites/ICommande.java
+=======
+/Users/Rachelle/Documents/M2 ALMA/Boobidoo/Fournisseur/Api/src/main/java/entites/IVetement.java
+/Users/Rachelle/Documents/M2 ALMA/Boobidoo/Fournisseur/Api/src/main/java/services/ICommandeServices.java
+/Users/Rachelle/Documents/M2 ALMA/Boobidoo/Fournisseur/Api/src/main/java/entites/ICommande.java
+>>>>>>> 9cdb6201571f07b5684c7e654f320bde9262811c
