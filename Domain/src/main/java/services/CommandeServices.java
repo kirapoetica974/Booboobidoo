@@ -9,45 +9,39 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import entites.Vetement;
+import exceptions.ExceptionPasEnStock;
 
 public class CommandeServices implements ICommandeServices {
 
 	private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 	
 	@Override
-	public void recevoirCommande(List<String> listeVetementString) {
-		List<Vetement> listeVetement = new ArrayList<Vetement>();
-		for(String vetementString : listeVetementString) {
-				try {
-					listeVetement.add(OBJECT_MAPPER.readValue(vetementString, Vetement.class));
-				} catch (JsonParseException e) {
-					e.printStackTrace();
-				} catch (JsonMappingException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-		}
+	public String envoyerCommande(String vetementString, int nbVetement) throws ExceptionPasEnStock {
+		Vetement vetement = null;
+		String vetementRetourne = null;
 		
-		//Vérifier les stocks
-	}
-
-	@Override
-	public void envoyerCommande(List<String> listeVetementString) {
-		List<Vetement> listeVetement = new ArrayList<Vetement>();
-		for(String vetementString : listeVetementString) {
-				try {
-					listeVetement.add(OBJECT_MAPPER.readValue(vetementString, Vetement.class));
-				} catch (JsonParseException e) {
-					e.printStackTrace();
-				} catch (JsonMappingException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+		try {
+			vetement = OBJECT_MAPPER.readValue(vetementString, Vetement.class);
+			
+			int quantite = (vetement.getQuantite()) - nbVetement;
+			
+	        if (0 > quantite) {
+	            throw new ExceptionPasEnStock("Pas assez de vetement");
+	        } else {
+	        	vetement.setQuantite(quantite);
+	        }
+			
+	        vetementRetourne = OBJECT_MAPPER.writeValueAsString(vetement);
+	        
+		} catch (JsonParseException e) {
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		
-		//Enlever du stock
+	
+        return vetementRetourne;
 	}
 	
 }

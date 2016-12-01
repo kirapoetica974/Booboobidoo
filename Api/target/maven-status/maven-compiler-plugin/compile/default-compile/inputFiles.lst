@@ -1,3 +1,4 @@
-/Users/Rachelle/Documents/M2 ALMA/Booboobidoo/projet_Services/Fournisseur/Api/src/main/java/entites/IVetement.java
-/Users/Rachelle/Documents/M2 ALMA/Booboobidoo/projet_Services/Fournisseur/Api/src/main/java/services/ICommandeServices.java
-/Users/Rachelle/Documents/M2 ALMA/Booboobidoo/projet_Services/Fournisseur/Api/src/main/java/entites/ICommande.java
+/home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/services/ICommandeServices.java
+/home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/exceptions/ExceptionPasEnStock.java
+/home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/entites/IVetement.java
+/home/xubuntu/Documents/Applications/Git/Projet_Services_Deploy/Fournisseur/Api/src/main/java/entites/ICommande.java

@@ -10,8 +10,8 @@ public class Fabrique implements IFabrique {
 
 	@Override
 	public Vetement creerVetement(String identifiant, String nom, String description,
-			String couleur, int prix) {
-		Vetement vetement = new Vetement(identifiant, nom, description, couleur, prix);
+			String couleur, int prix, int quantite) {
+		Vetement vetement = new Vetement(identifiant, nom, description, couleur, prix, quantite);
 		return vetement;
 	}
 

@@ -13,75 +13,90 @@ public class Vetement implements IVetement {
 
 	private int prix;
 	
+	private int quantite;
+	
 	public Vetement(String identifiant, String nom, String description,
-			String couleur, int prix) {
-<span class="nc" id="L18">		super();</span>
-<span class="nc" id="L19">		this.identifiant = identifiant;</span>
-<span class="nc" id="L20">		this.nom = nom;</span>
-<span class="nc" id="L21">		this.description = description;</span>
-<span class="nc" id="L22">		this.couleur = couleur;</span>
-<span class="nc" id="L23">		this.prix = prix;</span>
-<span class="nc" id="L24">	}</span>
+			String couleur, int prix, int quantite) {
+<span class="nc" id="L20">		super();</span>
+<span class="nc" id="L21">		this.identifiant = identifiant;</span>
+<span class="nc" id="L22">		this.nom = nom;</span>
+<span class="nc" id="L23">		this.description = description;</span>
+<span class="nc" id="L24">		this.couleur = couleur;</span>
+<span class="nc" id="L25">		this.prix = prix;</span>
+<span class="nc" id="L26">		this.quantite = quantite;</span>
+<span class="nc" id="L27">	}</span>
 
 	@Override
 	public String getIdentifiant() {
-<span class="nc" id="L28">		return identifiant;</span>
+<span class="nc" id="L31">		return identifiant;</span>
 	}
 
 	@Override
 	public void setIdentifiant(String identifiant) {
-<span class="nc" id="L33">		this.identifiant = identifiant;</span>
-<span class="nc" id="L34">	}</span>
+<span class="nc" id="L36">		this.identifiant = identifiant;</span>
+<span class="nc" id="L37">	}</span>
 
 	@Override
 	public String getNom() {
-<span class="nc" id="L38">		return nom;</span>
+<span class="nc" id="L41">		return nom;</span>
 	}
 
 	@Override 
 	public void setNom(String nom) {
-<span class="nc" id="L43">		this.nom = nom;</span>
-<span class="nc" id="L44">	}</span>
+<span class="nc" id="L46">		this.nom = nom;</span>
+<span class="nc" id="L47">	}</span>
 
 	@Override
 	public String getDescription() {
-<span class="nc" id="L48">		return description;</span>
+<span class="nc" id="L51">		return description;</span>
 	}
 
 	@Override
 	public void setDescription(String description) {
-<span class="nc" id="L53">		this.description = description;</span>
-<span class="nc" id="L54">	}</span>
+<span class="nc" id="L56">		this.description = description;</span>
+<span class="nc" id="L57">	}</span>
 
 	@Override
 	public String getCouleur() {
-<span class="nc" id="L58">		return couleur;</span>
+<span class="nc" id="L61">		return couleur;</span>
 	}
 
 	@Override
 	public void setCouleur(String couleur) {
-<span class="nc" id="L63">		this.couleur = couleur;</span>
-<span class="nc" id="L64">	}</span>
+<span class="nc" id="L66">		this.couleur = couleur;</span>
+<span class="nc" id="L67">	}</span>
 
 	@Override
 	public int getPrix() {
-<span class="nc" id="L68">		return prix;</span>
+<span class="nc" id="L71">		return prix;</span>
 	}
 
 	@Override
 	public void setPrix(int prix) {
-<span class="nc" id="L73">		this.prix = prix;</span>
-<span class="nc" id="L74">	}</span>
+<span class="nc" id="L76">		this.prix = prix;</span>
+<span class="nc" id="L77">	}</span>
+	
+	@Override
+	public int getQuantite() {
+<span class="nc" id="L81">		return quantite;</span>
+	}
+
+	@Override
+	public void setQuantite(int quantite) {
+<span class="nc" id="L86">		this.quantite = quantite;</span>
+<span class="nc" id="L87">	}</span>
 	
 	@Override
     public String toString() {
-<span class="nc" id="L78">        return &quot;Vetement{&quot; +</span>
-<span class="nc" id="L79">                &quot;identifiant=&quot; + identifiant +</span>
-<span class="nc" id="L80">                &quot;, nom='&quot; + nom + '\'' +</span>
-<span class="nc" id="L81">                &quot;, description='&quot; + description + '\'' +</span>
-<span class="nc" id="L82">                &quot;, couleur=&quot; + couleur +</span>
-<span class="nc" id="L83">                &quot;, prix=&quot; + prix +</span>
-<span class="nc" id="L84">                '}';</span>
+<span class="nc" id="L91">        return &quot;Vetement{&quot; +</span>
+                &quot;identifiant=&quot; + identifiant +
+                &quot;, nom='&quot; + nom + '\'' +
+                &quot;, description='&quot; + description + '\'' +
+                &quot;, couleur=&quot; + couleur +
+                &quot;, prix=&quot; + prix +
+                &quot;, quantite=&quot; + quantite +
+                '}';
 	}
+	
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

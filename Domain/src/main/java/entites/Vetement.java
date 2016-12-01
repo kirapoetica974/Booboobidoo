@@ -13,14 +13,17 @@ public class Vetement implements IVetement {
 
 	private int prix;
 	
+	private int quantite;
+	
 	public Vetement(String identifiant, String nom, String description,
-			String couleur, int prix) {
+			String couleur, int prix, int quantite) {
 		super();
 		this.identifiant = identifiant;
 		this.nom = nom;
 		this.description = description;
 		this.couleur = couleur;
 		this.prix = prix;
+		this.quantite = quantite;
 	}
 
 	@Override
@@ -74,6 +77,16 @@ public class Vetement implements IVetement {
 	}
 	
 	@Override
+	public int getQuantite() {
+		return quantite;
+	}
+
+	@Override
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
+	}
+	
+	@Override
     public String toString() {
         return "Vetement{" +
                 "identifiant=" + identifiant +
@@ -81,6 +94,8 @@ public class Vetement implements IVetement {
                 ", description='" + description + '\'' +
                 ", couleur=" + couleur +
                 ", prix=" + prix +
+                ", quantite=" + quantite +
                 '}';
 	}
+	
 }

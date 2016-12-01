@@ -22,5 +22,9 @@ public interface IVetement {
 	public int getPrix();
 
 	public void setPrix(int prix);
+
+	int getQuantite();
+
+	void setQuantite(int quantite);
 	
 }
